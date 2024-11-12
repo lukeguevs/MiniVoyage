@@ -8,10 +8,12 @@
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
                 "-g",
-                "-I${workspaceFolder}/include",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-L/usr/local/lib",
+                "-lOpenXLSX",
+                "-I/usr/local/include/OpenXLSX"
             ],
             "options": {
                 "cwd": "${fileDirname}"

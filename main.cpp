@@ -1,6 +1,6 @@
 #include "bdor.hpp"
 #include "voyage.hpp"
-#include "OpenXLSX/OpenXLSX.hpp"
+#include <OpenXLSX.hpp>
 
 using namespace std;
 

@@ -5,5 +5,5 @@
 #include "categorie.hpp"
 using namespace std;
 
-class Excursion : private CategorieOffre{
+class Excursion : private CategorieOffreReservation{
 };

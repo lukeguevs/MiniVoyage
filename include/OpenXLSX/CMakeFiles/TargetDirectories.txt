@@ -1,0 +1,7 @@
+/Users/adrientrahan/Documents/École/LOG2400/MiniVoyageLOG2400/include/OpenXLSX/CMakeFiles/OpenXLSX.dir
+/Users/adrientrahan/Documents/École/LOG2400/MiniVoyageLOG2400/include/OpenXLSX/CMakeFiles/edit_cache.dir
+/Users/adrientrahan/Documents/École/LOG2400/MiniVoyageLOG2400/include/OpenXLSX/CMakeFiles/rebuild_cache.dir
+/Users/adrientrahan/Documents/École/LOG2400/MiniVoyageLOG2400/include/OpenXLSX/CMakeFiles/list_install_components.dir
+/Users/adrientrahan/Documents/École/LOG2400/MiniVoyageLOG2400/include/OpenXLSX/CMakeFiles/install.dir
+/Users/adrientrahan/Documents/École/LOG2400/MiniVoyageLOG2400/include/OpenXLSX/CMakeFiles/install/local.dir
+/Users/adrientrahan/Documents/École/LOG2400/MiniVoyageLOG2400/include/OpenXLSX/CMakeFiles/install/strip.dir

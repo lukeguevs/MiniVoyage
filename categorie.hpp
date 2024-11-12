@@ -4,5 +4,5 @@
 #include <string>
 using namespace std;
 
-class Categorie{
+class CategorieOffre {
 };

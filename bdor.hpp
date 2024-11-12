@@ -6,7 +6,9 @@ using namespace std;
 
 class BDOR{
 
-    BDOR();
+    BDOR(){
+        
+    };
 
 };
 

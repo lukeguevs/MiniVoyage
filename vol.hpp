@@ -6,6 +6,6 @@
 using namespace std;
 
 
-class Voyage : public Categorie{
+class Vol : public CategorieOffre{
     
 };

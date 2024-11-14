@@ -1,13 +1,13 @@
 #pragma once
-#include <iostream>
-#include <vector>
+#include <map>
 #include <string>
+#include "BDCategorieAbstrait.hpp"
 
-using namespace std;
-
-class BDOR{
-
+class BDOR {
+public:
     BDOR();
-
+    void ajouterCategorie(string nom, BDCategorieAbstrait categorie);
+    BDCategorieAbstrait obtenirCategorie(string nom);
+private:
+    map<string, BDCategorieAbstrait> categories;
 };
-

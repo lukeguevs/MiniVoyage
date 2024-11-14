@@ -3,9 +3,13 @@
 #include <vector>
 #include <string>
 
+#include "BDCategorieAbstrait.hpp"
 #include "OffreReservationAbstrait.hpp"
 
 using namespace std;
 
-class Excursion : private OffreReservationAbstrait{
+class BDHebergement: public BDCategorieAbstrait {
+public:
+    BDHebergement();
 };
+

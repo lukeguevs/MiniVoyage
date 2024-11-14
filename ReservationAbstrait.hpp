@@ -2,10 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "categorie.hpp"
 using namespace std;
 
-
-class Vol : public CategorieOffreReservation{
-    
+class ReservationAbstrait {
 };

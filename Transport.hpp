@@ -7,5 +7,6 @@
 
 using namespace std;
 
-class Excursion : private OffreReservationAbstrait{
+class Transport : public OffreReservationAbstrait{
+    
 };

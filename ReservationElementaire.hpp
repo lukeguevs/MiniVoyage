@@ -2,7 +2,17 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "OffreReservationAbstrait.hpp"
+#include "Moment.hpp"
+#include "ReservationAbstrait.hpp"
+#include "ReservationComposite.hpp"
 using namespace std;
 
-class ReservationElementaire {
+class ReservationElementaire : public ReservationAbstrait{
+private:
+    shared_ptr<const OffreReservationAbstrait> offre;
+public:
+    ReservationElementaire(shared_ptr<const OffreReservationAbstrait> offre, Moment momentAchat);
+    Moment momentAchat;
+    void creerReservation(ReservationComposite* parent);
 };

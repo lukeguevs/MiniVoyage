@@ -4,8 +4,12 @@
 #include <string>
 
 #include "OffreReservationAbstrait.hpp"
+#include "Activite.hpp"
 
 using namespace std;
 
-class Excursion : private OffreReservationAbstrait{
+class Excursion : public OffreReservationAbstrait{
+public:
+    Excursion(Activite activite, int prix, string devise);
+    Activite activite;
 };

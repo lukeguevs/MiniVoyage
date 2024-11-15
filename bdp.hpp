@@ -8,6 +8,8 @@
 using namespace std;
 
 class BDP: public BDAbstrait<ReservationElementaire>{
+public:
     BDP();
+    shared_ptr<ReservationElementaire> createObjectFromRow(vector<string> row);
 };
 

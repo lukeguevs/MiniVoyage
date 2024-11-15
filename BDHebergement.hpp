@@ -9,6 +9,10 @@
 using namespace std;
 
 class BDHebergement: public BDCategorieAbstrait {
+private:
+    string nomCategorie = "Hebergement";
+    shared_ptr<OffreReservationAbstrait> createObjectFromRow(vector<string> row);
+    
 public:
     BDHebergement();
 };

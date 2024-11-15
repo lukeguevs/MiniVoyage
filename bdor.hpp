@@ -6,8 +6,9 @@
 class BDOR {
 public:
     BDOR();
-    void ajouterCategorie(string nom, BDCategorieAbstrait categorie);
-    BDCategorieAbstrait obtenirCategorie(string nom);
+    void ajouterCategorie(string nom, shared_ptr<BDCategorieAbstrait> categorie);
+    shared_ptr<BDCategorieAbstrait> obtenirCategorie(string nom);
+    
 private:
-    map<string, BDCategorieAbstrait> categories;
+    map<string, shared_ptr<BDCategorieAbstrait>> categories;
 };

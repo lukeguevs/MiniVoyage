@@ -11,6 +11,8 @@ using namespace std;
 class BDTransport: public BDCategorieAbstrait {
 private:
     string nomCategorie = "Transport";
+    shared_ptr<OffreReservationAbstrait> createObjectFromRow(vector<string> row);
+    
 public:
     BDTransport();
 };

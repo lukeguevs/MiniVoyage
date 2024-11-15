@@ -7,10 +7,10 @@ BDOR::BDOR() {
     cout << "Objet BDOR cree!\n";
 }
 
-void BDOR::ajouterCategorie(string nom, BDCategorieAbstrait categorie) {
+void BDOR::ajouterCategorie(string nom, shared_ptr<BDCategorieAbstrait> categorie) {
     categories[nom] = categorie;
 }
 
-BDCategorieAbstrait BDOR::obtenirCategorie(string nom) {
+shared_ptr<BDCategorieAbstrait> BDOR::obtenirCategorie(string nom) {
     return categories[nom];
 }

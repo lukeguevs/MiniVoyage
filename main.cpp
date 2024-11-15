@@ -5,6 +5,9 @@
 #include "BDHebergement.hpp"
 #include "BDExcursion.hpp"
 #include "Transport.hpp"
+#include "ReservationElementaire.hpp"
+#include "Segment.hpp"
+#include "Journee.hpp"
 
 
 using namespace std;
@@ -34,6 +37,15 @@ int main(){
     bdor.obtenirCategorie("excursion")->ajouterEntree(excursion[2]);
     bdor.obtenirCategorie("transport")->ajouterEntree(transports[11]);
     
+    cout << endl;
 //    Étape 2
+    Voyageur dora {"Dora"};
+    Voyage v1 {"Voyage de Dora", dora};
+    
+    shared_ptr<Segment> segmentFrance1 = make_shared<Segment>("France 1ère partie");
+    shared_ptr<Journee> journee1026 = make_shared<Journee>("2024-10-26");
+
+    v1.ajouterReservation(segmentFrance1);
+    segmentFrance1->ajouterReservation(journee1026);
     
 }

@@ -6,5 +6,5 @@ BDP::BDP() {
 
 
 shared_ptr<ReservationElementaire> BDP::createObjectFromRow(vector<string> row) {
-    return make_shared<ReservationElementaire>();
+    return nullptr;
 }

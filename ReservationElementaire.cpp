@@ -5,7 +5,7 @@ ReservationElementaire::ReservationElementaire(shared_ptr<const OffreReservation
 void ReservationElementaire::creerReservation(ReservationComposite* parent) {
     profondeur = parent->profondeur + 1;
     for (int i = 0; i <= profondeur; i++){
-        cout << "   ";
+        cout << "  ";
     }
-    cout << " cree dans le " << parent->nom << "!" << endl;
+    cout << "Reservation cree : " << parent->nomVoyage << "/" << momentAchat.date << "/" << offre -> nom << endl;
 }

@@ -10,6 +10,7 @@ private:
     ReservationComposite reservations;
     
 public:
+    Voyage(string nom, Voyageur voyageur, Voyage voyage);
     Voyage(string nom, Voyageur voyageur);
     void ajouterReservation(shared_ptr<ReservationAbstrait> reservation);
     Voyageur voyageur;

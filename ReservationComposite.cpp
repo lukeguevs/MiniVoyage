@@ -3,6 +3,7 @@
 ReservationComposite::ReservationComposite(string nom) : nom(nom) {};
 
 void ReservationComposite::ajouterReservation(shared_ptr<ReservationAbstrait> reservation) {
+    reservation->nomVoyage = nomVoyage;
     reservations.push_back(reservation);
     reservation->creerReservation(this);
 }

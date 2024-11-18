@@ -4,6 +4,7 @@
 #include <vector>
 #include <sstream>
 #include <memory>
+
 using namespace std;
 
 template <class T>
@@ -14,19 +15,24 @@ private:
 
 public:
     vector<shared_ptr<T>> loadFrom(string filename) {
-        fstream fin;
-        fin.open(filename, ios::in);
-        
+        fstream fin(filename, ios::in);
+        if (!fin.is_open()) throw runtime_error("Failed to open file: " + filename);
+
         vector<vector<string>> rows;
-        string line, word, tempString;
-        while (fin >> tempString) {
+        string line;
+
+        while (getline(fin, line)) {
+            stringstream ss(line);
             vector<string> columns;
-            getline(fin, line);
-            stringstream s(line);
-            while (getline(s, word, ',')) columns.push_back(word);
-            columns[0] = tempString + columns[0];
-            rows.push_back(columns);
+            string word;
+            while (getline(ss, word, ',')) {
+                columns.push_back(word);
+            }
+            if (!columns.empty()) {
+                rows.push_back(columns);
+            }
         }
+
         fin.close();
         rows.erase(rows.begin());
         

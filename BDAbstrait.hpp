@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <sstream>
-
+#include <memory>
 using namespace std;
 
 template <class T>

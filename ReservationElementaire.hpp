@@ -6,6 +6,7 @@
 #include "Moment.hpp"
 #include "ReservationAbstrait.hpp"
 #include "ReservationComposite.hpp"
+#include <memory>
 using namespace std;
 
 class ReservationElementaire : public ReservationAbstrait{

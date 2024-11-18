@@ -12,7 +12,6 @@ public:
     ReservationComposite(string nom);
     void ajouterReservation(shared_ptr<ReservationAbstrait> reservation);
     void retirerReservation(shared_ptr<ReservationAbstrait> reservation);
-    
     void creerReservation(ReservationComposite* parent);
     string nom;
 };

@@ -1,6 +1,9 @@
 
 #include "Segment.hpp"
 
+Segment::~Segment(){
+    cout << nom << " efface!" << endl;
+}
 
 Segment::Segment(string nom) : ReservationComposite(nom) {};
 

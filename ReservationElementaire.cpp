@@ -1,6 +1,8 @@
 #include "ReservationElementaire.hpp"
 
-ReservationElementaire::ReservationElementaire(shared_ptr<const OffreReservationAbstrait> offre, Moment momentAchat) : offre(offre), momentAchat(momentAchat) {
+ReservationElementaire::ReservationElementaire(shared_ptr<const OffreReservationAbstrait> offre, Moment momentAchat, BDP bdp) : 
+offre(offre), momentAchat(momentAchat){
+    baseDePlanif = make_shared<BDP>(bdp);
     total = conversionEUROCAN(offre);
 };
 
@@ -9,7 +11,9 @@ void ReservationElementaire::creerReservation(ReservationComposite* parent) {
     for (int i = 0; i <= profondeur; i++){
         cout << "  ";
     }
-    cout << "Reservation creee : " << parent->nomVoyage << "/" << momentAchat.date << "/" << offre -> nom << "!" << endl;
+    cout << "Reservation creee : " << parent->nomVoyage << "/" << momentAchat.date << "/" << offre->nom << "!" << endl;
+    Transaction transaction{offre, momentAchat.date, vendeur};
+    baseDePlanif->ajouterEntree(make_shared<Transaction>(transaction));
 }
 
 void ReservationElementaire::retirerReservation(shared_ptr<ReservationAbstrait> reservation){
@@ -19,4 +23,11 @@ void ReservationElementaire::retirerReservation(shared_ptr<ReservationAbstrait> 
 int ReservationElementaire::conversionEUROCAN(shared_ptr<const OffreReservationAbstrait> offre){
     if (offre->devise == "EURO") return (offre->prix * (2 / 3));
     else return offre->prix;
+}
+
+void ReservationElementaire::setVendeur(Vendeur nouveauVendeur){
+    vendeur = nouveauVendeur;
+}
+Vendeur ReservationElementaire::getVendeur(){
+    return vendeur;
 }

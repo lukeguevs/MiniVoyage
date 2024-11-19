@@ -44,7 +44,7 @@ public:
         return outputList;
     }
     
-    virtual void ajouterEntree(shared_ptr<T> element) {
+    virtual void ajouterEntree(shared_ptr<T> element){
         elements.push_back(element);
     }
     

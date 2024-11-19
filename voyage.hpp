@@ -14,6 +14,8 @@ public:
     Voyage(string nom, Voyageur voyageur);
     void ajouterReservation(shared_ptr<ReservationAbstrait> reservation);
     void retirerReservation(shared_ptr<ReservationAbstrait> reservation);
+    void afficherTotal();
     Voyageur voyageur;
     string nom;
+    int total = 0;
 };

@@ -11,3 +11,7 @@ void Journee::creerReservation(ReservationComposite* parent) {
     }
     cout << "Journee " << nom << " cree dans le segment " << parent->nom << "!" << endl;
 }
+
+void Journee::retirerReservation(shared_ptr<ReservationAbstrait> reservation){
+    cout << "Journee " << nom << " efface!" << endl;
+}

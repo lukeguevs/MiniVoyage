@@ -2,7 +2,6 @@
 #include "Segment.hpp"
 
 Segment::~Segment(){
-    cout << nom << " efface!" << endl;
 }
 
 Segment::Segment(string nom) : ReservationComposite(nom) {};
@@ -14,3 +13,8 @@ void Segment::creerReservation(ReservationComposite* parent) {
     }
     cout << "Segment " << nom << " cree dans le " << parent->nom << "!" << endl;
 }
+void Segment::retirerReservation(shared_ptr<ReservationAbstrait> reservation){
+
+    cout << "  "<< " Segment " << nom << " efface!" << endl;
+}
+

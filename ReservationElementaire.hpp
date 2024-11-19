@@ -17,4 +17,6 @@ public:
     ReservationElementaire(shared_ptr<const OffreReservationAbstrait> offre, Moment momentAchat);
     Moment momentAchat;
     void creerReservation(ReservationComposite* parent);
-};
+    void retirerReservation(shared_ptr<ReservationAbstrait> reservation);
+    int conversionEUROCAN(shared_ptr< const OffreReservationAbstrait> offre);
+    };

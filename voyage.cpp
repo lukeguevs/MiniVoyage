@@ -2,15 +2,15 @@
 
 Voyage::Voyage(string nom, Voyageur voyageur) :
     voyageur(voyageur),
-    reservations(ReservationComposite(nom)){
+    reservations(ReservationComposite(nom)), nom(nom) {
     cout << nom << " cree!" << endl;
     reservations.nomVoyage = nom;
 };
-Voyage::Voyage(string nom, Voyageur voyageur, const Voyage& voyage) : voyageur(voyageur), reservations(voyage.reservations)
+Voyage::Voyage(string nom, Voyageur voyageur, const Voyage& voyage) : voyageur(voyageur), reservations(voyage.reservations), nom(nom)
 {
     reservations.nom = nom;
     reservations.nomVoyage = nom;
-    cout << nom  << " cree a partir du " << reservations.nomVoyage << "!" << endl;
+    cout << nom  << " copie a partir du " << voyage.nom << "!" << endl;
 }
 
 void Voyage::ajouterReservation(shared_ptr<ReservationAbstrait> reservation) {

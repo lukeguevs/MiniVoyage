@@ -9,7 +9,7 @@ void ReservationElementaire::creerReservation(ReservationComposite* parent) {
     for (int i = 0; i <= profondeur; i++){
         cout << "  ";
     }
-    cout << "Reservation cree : " << parent->nomVoyage << "/" << momentAchat.date << "/" << offre -> nom << "!" << endl;
+    cout << "Reservation creee : " << parent->nomVoyage << "/" << momentAchat.date << "/" << offre -> nom << "!" << endl;
 }
 
 void ReservationElementaire::retirerReservation(shared_ptr<ReservationAbstrait> reservation){

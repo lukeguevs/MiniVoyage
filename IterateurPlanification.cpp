@@ -1,7 +1,7 @@
 #include "IterateurPlanification.hpp"
 
 IterateurPlanification::IterateurPlanification(shared_ptr<ReservationAbstrait> parent){
-    
+    reservations.push_back(parent);
 };
 
 

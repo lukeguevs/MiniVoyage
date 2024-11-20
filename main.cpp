@@ -30,7 +30,6 @@ int main(){
     vector<shared_ptr<OffreReservationAbstrait>> hebergements = bdor.obtenirCategorie("hebergement")->getElements();
     vector<shared_ptr<OffreReservationAbstrait>> excursions = bdor.obtenirCategorie("excursion")->getElements();
 
-    
     for (auto transport : transports) bdor.obtenirCategorie("transport")->ajouterEntree(transport);
     for (auto hebergement : hebergements) bdor.obtenirCategorie("hebergement")->ajouterEntree(hebergement);
     for (auto excursion : excursions) bdor.obtenirCategorie("excursion")->ajouterEntree(excursion);

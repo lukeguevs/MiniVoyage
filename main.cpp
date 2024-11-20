@@ -22,9 +22,14 @@ int main(){
     bdor.ajouterCategorie("hebergement", make_shared<BDHebergement>());
     bdor.ajouterCategorie("excursion", make_shared<BDExcursion>());
     
-    vector<shared_ptr<OffreReservationAbstrait>> transports = bdor.obtenirCategorie("transport")->loadFrom("./data/vol.csv");
-    vector<shared_ptr<OffreReservationAbstrait>> hebergements = bdor.obtenirCategorie("hebergement")->loadFrom("./data/hebergement.csv");
-    vector<shared_ptr<OffreReservationAbstrait>> excursions = bdor.obtenirCategorie("excursion")->loadFrom("./data/excursion.csv");
+    bdor.obtenirCategorie("transport")->addFrom("./data/vol.csv");
+    bdor.obtenirCategorie("hebergement")->addFrom("./data/hebergement.csv");
+    bdor.obtenirCategorie("excursion")->addFrom("./data/excursion.csv");
+
+    vector<shared_ptr<OffreReservationAbstrait>> transports = bdor.obtenirCategorie("transport")->getElements();
+    vector<shared_ptr<OffreReservationAbstrait>> hebergements = bdor.obtenirCategorie("hebergement")->getElements();
+    vector<shared_ptr<OffreReservationAbstrait>> excursions = bdor.obtenirCategorie("excursion")->getElements();
+
     
     for (auto transport : transports) bdor.obtenirCategorie("transport")->ajouterEntree(transport);
     for (auto hebergement : hebergements) bdor.obtenirCategorie("hebergement")->ajouterEntree(hebergement);
@@ -116,6 +121,9 @@ int main(){
     shared_ptr<ReservationElementaire> volAirTransatFrance = make_shared<ReservationElementaire>(transports[11], moment1103, bdp);
     journee1103->ajouterReservation(volAirTransatFrance);
 
+    cout << endl << endl;
+    ;
+
     Voyageur diego{"Diego"};
     Voyage v2{"Voyage de Diego", diego, v1};
     v2.retirerReservation(segmentPortugal);
@@ -142,8 +150,13 @@ int main(){
     shared_ptr<ReservationElementaire> volAirEuropa1026 = make_shared<ReservationElementaire>(transports[13], moment1031, bdp);
     journee1031Diego->ajouterReservation(volAirEuropa1026);
 
+    cout << endl;
+
     Voyageur alicia{"Alicia"};
     Voyage v3{"Voyage d'Alicia", alicia, v2};
+
+    cout << endl;
+    
     v1.afficherTotal();
     v2.afficherTotal();
     v3.afficherTotal();

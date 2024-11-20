@@ -23,5 +23,5 @@ void Voyage::retirerReservation(shared_ptr<ReservationAbstrait> reservation){
 
 void Voyage::afficherTotal(){
     total = reservations.total;
-    cout << "Total des frais pour le " << nom << "($ CA): " << total << endl;
+    cout << "Total des frais pour le " << nom << "($ CA) : " << total << endl;
 }

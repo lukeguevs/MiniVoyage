@@ -14,7 +14,7 @@ private:
     virtual shared_ptr<T> createObjectFromRow(vector<string> row) = 0;
 
 public:
-    vector<shared_ptr<T>> loadFrom(string filename) {
+    void addFrom(string filename) {
         fstream fin(filename, ios::in);
         if (!fin.is_open()) throw runtime_error("Failed to open file: " + filename);
 
@@ -36,17 +36,18 @@ public:
         fin.close();
         rows.erase(rows.begin());
         
-        vector<shared_ptr<T>> outputList;
         for (auto row : rows) {
             shared_ptr<T> newObject = createObjectFromRow(row);
-            outputList.push_back(newObject);
+            elements.push_back(newObject);
         }
-        return outputList;
     }
     
     virtual void ajouterEntree(shared_ptr<T> element){
         elements.push_back(element);
     }
     
+    virtual vector<shared_ptr<T>> getElements(){
+        return elements;
+    }
 };
 

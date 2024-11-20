@@ -3,7 +3,11 @@
 #include <vector>
 #include <string>
 #include <memory>
+#include "IterateurPlanification.hpp"
 using namespace std;
+
+class IterateurPlanification;
+
 class ReservationComposite;
 
 class ReservationAbstrait {
@@ -14,6 +18,7 @@ public:
     int total = 0;
     int profondeur = 0;
     string nomVoyage = "";
+    IterateurPlanification creerIterateur();
 
 protected:
     ReservationAbstrait() = default;

@@ -12,8 +12,7 @@ void ReservationElementaire::creerReservation(ReservationComposite* parent) {
         cout << "  ";
     }
     cout << "Reservation creee : " << parent->nomVoyage << "/" << momentAchat.date << "/" << offre->nom << "!" << endl;
-    Transaction transaction{offre, momentAchat.date, vendeur};
-    baseDePlanif->ajouterEntree(make_shared<Transaction>(transaction));
+    baseDePlanif->ajouterEntree(make_shared<ReservationElementaire>(*this));
 }
 
 void ReservationElementaire::retirerReservation(shared_ptr<ReservationAbstrait> reservation){

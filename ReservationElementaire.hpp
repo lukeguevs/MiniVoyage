@@ -27,4 +27,5 @@ public:
     void creerReservation(ReservationComposite* parent);
     void retirerReservation(shared_ptr<ReservationAbstrait> reservation);
     int conversionEUROCAN(shared_ptr< const OffreReservationAbstrait> offre);
-    };
+    
+};

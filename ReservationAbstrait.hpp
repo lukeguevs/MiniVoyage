@@ -5,6 +5,8 @@
 #include <memory>
 using namespace std;
 class ReservationComposite;
+class IterateurPlanification;
+
 
 class ReservationAbstrait {
 public:
@@ -14,7 +16,8 @@ public:
     int total = 0;
     int profondeur = 0;
     string nomVoyage = "";
-
+    static IterateurPlanification creerIterateur(shared_ptr<ReservationAbstrait> reservation);
+    
 protected:
     ReservationAbstrait() = default;
     virtual ~ReservationAbstrait() = default;

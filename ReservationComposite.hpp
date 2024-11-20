@@ -8,9 +8,8 @@ using namespace std;
 class Voyage;
 
 class ReservationComposite : public ReservationAbstrait{
-private:
-    vector<shared_ptr<ReservationAbstrait>> reservations;
 public:
+    vector<shared_ptr<ReservationAbstrait>> reservations;
     ReservationComposite(string nom);
     void ajouterReservation(shared_ptr<ReservationAbstrait> reservation);
     void retirerReservation(shared_ptr<ReservationAbstrait> reservation);

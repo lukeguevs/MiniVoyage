@@ -7,15 +7,14 @@
 // la classe voyage pourrait très bien être une sous-classe de Reservation Composite.
 class Voyage {
 private:
-    shared_ptr<ReservationComposite> reservations;
     
 public:
+    shared_ptr<ReservationComposite> reservations;
     Voyage(string nom, Voyageur voyageur, const Voyage& voyage);
     Voyage(string nom, Voyageur voyageur);
     void ajouterReservation(shared_ptr<ReservationAbstrait> reservation);
-    void retirerReservation(shared_ptr<ReservationAbstrait> reservation);
+    void retirerReservation(string nomReservation);
     void afficherTotal();
     Voyageur voyageur;
     string nom;
-    int total = 0;
 };

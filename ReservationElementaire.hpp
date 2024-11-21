@@ -17,15 +17,16 @@ class BDP;
 class ReservationElementaire : public ReservationAbstrait{
 private:
     Vendeur vendeur;
-    shared_ptr<const OffreReservationAbstrait> offre;
     shared_ptr<BDP> baseDePlanif;
 public:
+    ReservationElementaire(ReservationElementaire& source);
+    ReservationElementaire(shared_ptr<const OffreReservationAbstrait> offre, Moment momentAchat, BDP bdp);
     void setVendeur(Vendeur vendeur);
     Vendeur getVendeur();
-    ReservationElementaire(shared_ptr<const OffreReservationAbstrait> offre, Moment momentAchat, BDP bdp);
     Moment momentAchat;
-    void creerReservation(ReservationComposite* parent);
-    void retirerReservation(shared_ptr<ReservationAbstrait> reservation);
-    int conversionEUROCAN(shared_ptr< const OffreReservationAbstrait> offre);
+    shared_ptr<const OffreReservationAbstrait> offre;
     
+    void creerReservation(ReservationComposite* parent, shared_ptr<ReservationAbstrait> element);
+    void retirerReservation(string nomReservation);
+    int conversionEUROCAN();
 };

@@ -10,14 +10,8 @@ using namespace std;
 
 class ReservationElementaire;
 
-struct Transaction{
-    shared_ptr<const OffreReservationAbstrait> reservation;
-    string dateAchat;
-    Vendeur vendeur;
-};
-
-class BDP: public BDAbstrait<Transaction> {
+class BDP: public BDAbstrait<ReservationElementaire> {
 public:
     BDP() = default;
-    shared_ptr<Transaction> createObjectFromRow(vector<string> row);
+    shared_ptr<ReservationElementaire> createObjectFromRow(vector<string> row);
 };

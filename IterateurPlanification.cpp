@@ -12,7 +12,9 @@ bool IterateurPlanification::estFin()
 
 void IterateurPlanification::suivant()
 {
-    while (!dynamic_pointer_cast<ReservationComposite>(reservations[0]))
+    if (!estFin()) reservations.erase(reservations.begin());
+    
+    while (reservations.size() > 0 && dynamic_pointer_cast<ReservationComposite>(reservations[0]))
     {
         shared_ptr<ReservationComposite> composite = dynamic_pointer_cast<ReservationComposite>(reservations[0]);
         for (auto element : composite->reservations)
@@ -23,13 +25,16 @@ void IterateurPlanification::suivant()
     }
 }
 
-shared_ptr<ReservationElementaire> IterateurPlanification::obtenirPremier()
-{
-    suivant();
+shared_ptr<ReservationElementaire> IterateurPlanification::obtenirPremier(){
+    if (estFin()) return nullptr;
+    reservations.insert(reservations.begin(), nullptr);
+    if (!dynamic_pointer_cast<ReservationElementaire>(reservations[0])) suivant();
+    if (estFin()) return nullptr;
     return dynamic_pointer_cast<ReservationElementaire>(reservations[0]);
 }
 
 shared_ptr<ReservationElementaire> IterateurPlanification::obtenirSelection()
 {
+    if (estFin()) return nullptr;
     return dynamic_pointer_cast<ReservationElementaire>(reservations[0]);
 }

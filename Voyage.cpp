@@ -3,27 +3,37 @@
 
 Voyage::Voyage(string nom, Voyageur voyageur) :
     voyageur(voyageur), nom(nom) {
-    reservations = make_shared<ReservationComposite>(nom);
+    reservations = make_shared<ReservationComposite>(nom, "");
     cout << nom << " cree!" << endl;
-    reservations->nomVoyage = nom;
 };
-Voyage::Voyage(string nom, Voyageur voyageur, const Voyage& voyage) : voyageur(voyageur), reservations(voyage.reservations), nom(nom)
+
+Voyage::Voyage(string nom, Voyageur voyageur, const Voyage& voyage) : voyageur(voyageur), nom(nom)
 {
+    reservations = make_shared<ReservationComposite>(*voyage.reservations);
     reservations->nom = nom;
-    reservations->nomVoyage = nom;
+    reservations->definirVoyage(this);
     cout << nom  << " copie a partir du " << voyage.nom << "!" << endl;
 }
 
 void Voyage::ajouterReservation(shared_ptr<ReservationAbstrait> reservation) {
+    reservations->definirVoyage(this);
     reservations->ajouterReservation(reservation);
 }
 
-void Voyage::retirerReservation(shared_ptr<ReservationAbstrait> reservation){
-    reservations->retirerReservation(reservation);
+void Voyage::retirerReservation(string nomReservation){
+    reservations->retirerReservation(nomReservation);
 }
 
 void Voyage::afficherTotal(){
     IterateurPlanification iterateur = ReservationAbstrait::creerIterateur(reservations);
     shared_ptr<ReservationElementaire> reservation = iterateur.obtenirPremier();
+    
+    int total = 0;
+    while (reservation != nullptr) {
+        total += reservation->conversionEUROCAN();
+        iterateur.suivant();
+        reservation = iterateur.obtenirSelection();
+    }
+    
     cout << "Total des frais pour le " << nom << "($ CA) : " << total << endl;
 }

@@ -10,9 +10,11 @@ class Voyage;
 class ReservationComposite : public ReservationAbstrait{
 public:
     vector<shared_ptr<ReservationAbstrait>> reservations;
-    ReservationComposite(string nom);
+    ReservationComposite(string nom, string type);
+    ReservationComposite(ReservationComposite& source);
     void ajouterReservation(shared_ptr<ReservationAbstrait> reservation);
-    void retirerReservation(shared_ptr<ReservationAbstrait> reservation);
-    void creerReservation(ReservationComposite* parent);
-    string nom;
+    void retirerReservation(string nomReservation);
+    void creerReservation(ReservationComposite* parent, shared_ptr<ReservationAbstrait> element);
+    void definirVoyage(Voyage* voyage);
+    string type = "";
 };

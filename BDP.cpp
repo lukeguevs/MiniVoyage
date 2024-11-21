@@ -1,6 +1,6 @@
 #include "BDP.hpp"
 
 
-shared_ptr<Transaction> BDP::createObjectFromRow(vector<string> row) {
+shared_ptr<ReservationElementaire> BDP::createObjectFromRow(vector<string> row) {
     return nullptr;
 }

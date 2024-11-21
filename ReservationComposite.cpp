@@ -1,44 +1,62 @@
 #include "ReservationComposite.hpp"
+#include "ReservationElementaire.hpp"
+#include <cctype>
 
-ReservationComposite::ReservationComposite(string nom) : nom(nom) {};
+ReservationComposite::ReservationComposite(string nom, string type) : type(type){
+    this->nom = nom;
+};
+
+ReservationComposite::ReservationComposite(ReservationComposite& source) {
+    this->nom = source.nom;
+    this->type = source.type;
+    for (auto sousReservation : source.reservations) {
+        shared_ptr<ReservationAbstrait> enfant;
+        
+        if (dynamic_pointer_cast<ReservationComposite>(sousReservation)){
+            enfant = make_shared<ReservationComposite>(*dynamic_pointer_cast<ReservationComposite>(sousReservation));
+        }else{
+            enfant = make_shared<ReservationElementaire>(*dynamic_pointer_cast<ReservationElementaire>(sousReservation));
+        }
+        reservations.push_back(enfant);
+    }
+}
 
 void ReservationComposite::ajouterReservation(shared_ptr<ReservationAbstrait> reservation) {
-    reservation->parent = this;
-    reservation->nomVoyage = nomVoyage;
     reservations.push_back(reservation);
-    reservation->creerReservation(this);
-    total += reservation->total;
-    if (parent){
-        ReservationAbstrait *current = reservation->parent;
-        while(current != nullptr){
-            current->total += reservation->total;
-            current = current->parent;
-        }
-    }
+    reservation->definirVoyage(this->voyage);
+    reservation->creerReservation(this, reservation);
 }
 
-void ReservationComposite::retirerReservation(shared_ptr<ReservationAbstrait> reservation) {
-    ReservationAbstrait* current = this;
-    while (current != nullptr) {
-        current->total -= reservation->total;  
-        current = current->parent;
+void ReservationComposite::retirerReservation(string nomReservation) {
+    if (nom == nomReservation) {
+        string capitalizedType = type;
+        capitalizedType[0] = toupper(type[0]);
+        cout << "  " << capitalizedType << " " << nom << " efface!" << endl;
     }
-    reservation->retirerReservation(reservation);
     for (int i = 0; i < reservations.size(); i++) {
-        if (reservations[i] == reservation) {
+        reservations[i]->retirerReservation(nomReservation);
+        if (reservations[i]->nom == nomReservation) {
             reservations.erase(reservations.begin() + i);
-            break;
         }
     }
 }
 
 
-void ReservationComposite::creerReservation(ReservationComposite* parent) {
+void ReservationComposite::creerReservation(ReservationComposite* parent, shared_ptr<ReservationAbstrait> element) {
     profondeur = parent->profondeur + 1;
     for (int i = 0; i < profondeur; i++){
         cout << "  ";
     }
-    cout << nom << " cree dans le " << parent->nom << "!" << endl;
+    string capitalizedType = type;
+    capitalizedType[0] = toupper(type[0]);
+    cout << capitalizedType << " " << nom << " cree dans le " << parent->type << (parent->type == "" ? "" : " ") << parent->nom << "!" << endl;
+}
+
+void ReservationComposite::definirVoyage(Voyage* voyage) {
+    ReservationAbstrait::definirVoyage(voyage);
+    for (auto enfant: reservations){
+        enfant->definirVoyage(voyage);
+    }
 }
 
 

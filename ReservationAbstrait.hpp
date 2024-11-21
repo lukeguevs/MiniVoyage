@@ -6,19 +6,22 @@
 using namespace std;
 class ReservationComposite;
 class IterateurPlanification;
+class Voyage;
 
 
 class ReservationAbstrait {
 public:
-    ReservationAbstrait *parent = nullptr;
-    virtual void creerReservation(ReservationComposite* parent) = 0;
-    virtual void retirerReservation(shared_ptr<ReservationAbstrait> reservation) = 0;
-    int total = 0;
-    int profondeur = 0;
-    string nomVoyage = "";
+    virtual void creerReservation(ReservationComposite* parent, shared_ptr<ReservationAbstrait> element) = 0;
+    virtual void retirerReservation(string nomReservation) = 0;
+    virtual void definirVoyage(Voyage* voyage);
     static IterateurPlanification creerIterateur(shared_ptr<ReservationAbstrait> reservation);
+    ReservationAbstrait *parent = nullptr;
+    int profondeur = 0;
+    string nom = "";
     
+    Voyage* voyage;
 protected:
-    ReservationAbstrait() = default;
     virtual ~ReservationAbstrait() = default;
+    ReservationAbstrait() = default;
+
 };

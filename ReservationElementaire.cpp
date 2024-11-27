@@ -22,8 +22,8 @@ void ReservationElementaire::creerReservation(ReservationComposite* parent, shar
 void ReservationElementaire::retirerReservation(string nomReservation){
 }
 
-int ReservationElementaire::conversionEUROCAN(){
-    if (offre->devise == "EURO") return (offre->prix / 3 * 2);
+int ReservationElementaire::convertirEuroCad(){
+    if (offre->devise == "EURO") return (offre->prix / conversionEuroCad);
     else return offre->prix;
 }
 
@@ -32,4 +32,9 @@ void ReservationElementaire::setVendeur(Vendeur nouveauVendeur){
 }
 Vendeur ReservationElementaire::getVendeur(){
     return vendeur;
+}
+
+double ReservationElementaire::conversionEuroCad = 1.5;
+void ReservationElementaire::changeConversionEuroCad(double conversion){
+    conversionEuroCad = conversion;
 }

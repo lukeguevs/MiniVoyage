@@ -18,6 +18,7 @@ class ReservationElementaire : public ReservationAbstrait{
 private:
     Vendeur vendeur;
     shared_ptr<BDP> baseDePlanif;
+    static double conversionEuroCad;
 public:
     ReservationElementaire(ReservationElementaire& source);
     ReservationElementaire(shared_ptr<const OffreReservationAbstrait> offre, Moment momentAchat, BDP bdp);
@@ -28,5 +29,6 @@ public:
     
     void creerReservation(ReservationComposite* parent, shared_ptr<ReservationAbstrait> element);
     void retirerReservation(string nomReservation);
-    int conversionEUROCAN();
+    int convertirEuroCad();
+    static void changeConversionEuroCad(double conversion);
 };

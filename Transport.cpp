@@ -6,7 +6,7 @@ Transport::Transport(
     int prix,
     string devise
 ) :
-    OffreReservationAbstrait(ligne.nom, prix, devise),
+OffreReservationAbstrait(ligne.nom, prix, devise),
     ligne(ligne),
     classe(classe)
 {};

@@ -2,7 +2,7 @@
 #include "ReservationElementaire.hpp"
 #include <cctype>
 
-ReservationComposite::ReservationComposite(string nom, string type) : type(type){
+ReservationComposite::ReservationComposite(string nom, string type, bool masculin) : type(type), masculin(masculin){
     this->nom = nom;
 };
 
@@ -49,7 +49,7 @@ void ReservationComposite::creerReservation(ReservationComposite* parent, shared
     }
     string capitalizedType = type;
     capitalizedType[0] = toupper(type[0]);
-    cout << capitalizedType << " " << nom << " cree dans le " << parent->type << (parent->type == "" ? "" : " ") << parent->nom << "!" << endl;
+    cout << capitalizedType << " " << nom << " " << (masculin ? "cree" : "creee") << " dans le " << parent->type << (parent->type == "" ? "" : " ") << parent->nom << "!" << endl;
 }
 
 void ReservationComposite::definirVoyage(Voyage* voyage) {

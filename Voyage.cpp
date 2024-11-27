@@ -3,7 +3,7 @@
 
 Voyage::Voyage(string nom, Voyageur voyageur) :
     voyageur(voyageur), nom(nom) {
-    reservations = make_shared<ReservationComposite>(nom, "");
+    reservations = make_shared<ReservationComposite>(nom, "", true);
     cout << nom << " cree!" << endl;
 };
 
@@ -35,5 +35,5 @@ void Voyage::afficherTotal(){
         reservation = iterateur.obtenirSelection();
     }
     
-    cout << "Total des frais pour le " << nom << "($ CA) : " << total << endl;
+    cout << "Total des frais pour le " << nom << " ($ CA): " << total << endl;
 }

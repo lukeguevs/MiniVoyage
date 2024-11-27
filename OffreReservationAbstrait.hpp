@@ -5,9 +5,11 @@
 using namespace std;
 
 class OffreReservationAbstrait {
+private:
+    string devise;
 public:
     OffreReservationAbstrait(string nom, int prix, string devise);
     int prix;
-    string devise;
     string nom;
+    string obtenirDevise() const;
 };

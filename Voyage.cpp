@@ -30,7 +30,7 @@ void Voyage::afficherTotal(){
     
     int total = 0;
     while (reservation != nullptr) {
-        total += reservation->convertirEuroCad();
+        total += reservation->obtenirOffreCad();
         iterateur.suivant();
         reservation = iterateur.obtenirSelection();
     }

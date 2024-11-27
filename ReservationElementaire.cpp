@@ -22,8 +22,8 @@ void ReservationElementaire::creerReservation(ReservationComposite* parent, shar
 void ReservationElementaire::retirerReservation(string nomReservation){
 }
 
-int ReservationElementaire::convertirEuroCad(){
-    if (offre->devise == "EURO") return (offre->prix / conversionEuroCad);
+int ReservationElementaire::obtenirOffreCad(){
+    if (offre->obtenirDevise() == "EURO") return (offre->prix * conversionEuroCad);
     else return offre->prix;
 }
 

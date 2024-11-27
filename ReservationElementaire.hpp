@@ -29,6 +29,6 @@ public:
     
     void creerReservation(ReservationComposite* parent, shared_ptr<ReservationAbstrait> element);
     void retirerReservation(string nomReservation);
-    int convertirEuroCad();
+    int obtenirOffreCad();
     static void changeConversionEuroCad(double conversion);
 };

@@ -1,8 +1,7 @@
 #include "ReservationDecorateurAbstrait.hpp"
 
 
-ReservationDecorateurAbstrait::ReservationDecorateurAbstrait(ReservationAbstrait* reservation) {
-    this->reservation = reservation;
+ReservationDecorateurAbstrait::ReservationDecorateurAbstrait(ReservationAbstrait* reservation, shared_ptr<Moment> moment) : reservation(reservation), moment(moment) {
 }
 
 void ReservationDecorateurAbstrait::creerReservation(ReservationComposite* parent, shared_ptr<ReservationAbstrait> element) {

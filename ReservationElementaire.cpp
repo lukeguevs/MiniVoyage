@@ -23,8 +23,8 @@ void ReservationElementaire::retirerReservation(string nomReservation){
 }
 
 int ReservationElementaire::obtenirOffreCad(){
-    if (offre->obtenirDevise() == "EURO") return (offre->prix * conversionEuroCad);
-    else return offre->prix;
+    if (offre->obtenirDevise() == "EURO") return (offre->obtenirPrix() * conversionEuroCad);
+    else return offre->obtenirPrix();
 }
 
 void ReservationElementaire::setVendeur(Vendeur nouveauVendeur){

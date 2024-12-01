@@ -18,7 +18,6 @@ public:
     ReservationAbstrait *parent = nullptr;
     int profondeur = 0;
     string nom = "";
-    
     Voyage* voyage;
 protected:
     virtual ~ReservationAbstrait() = default;

@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <stdio.h>
+#include <memory>
 
 #include "PrixStrategieAbstrait.hpp"
 

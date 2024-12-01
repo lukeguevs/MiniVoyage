@@ -7,7 +7,9 @@
 #include "BDExcursion.hpp"
 #include "Transport.hpp"
 #include "ReservationElementaire.hpp"
-
+#include "ReservationDecorateurAbstrait.hpp"
+#include "ReservationModificationDecorateur.hpp"
+#include "Afficheur.hpp"
 using namespace std;
 
 int main(){
@@ -157,4 +159,22 @@ int main(){
     v1->afficherTotal();
     v2->afficherTotal();
     v3->afficherTotal();
+
+    cout << endl
+        << "--- Debut de la sortie du TP5" << endl
+        << endl;
+
+    OffreReservationAbstrait restaurantHotel("Restaurant de l'hôtel Stella", 0, "EUR");
+    Moment moment1027("2024-10-27", "19h");
+    shared_ptr<ReservationElementaire> restaurantHotelStella = make_shared<ReservationElementaire>(make_shared<OffreReservationAbstrait>(restaurantHotel), moment1027, bdp);
+    ReservationModificationDecorateur reservationStellaDecor;
+    reservationStellaDecor.reservation = hotelStella;
+    reservationStellaDecor.ajouterModification(restaurantHotelStella);
+
+    Afficheur *afficheur = Afficheur::obtenirInstance();
+    afficheur->setFilename("logDora.txt");
+
+    afficheur->afficherString(v1->nom + ":\n");
+    
+
 }

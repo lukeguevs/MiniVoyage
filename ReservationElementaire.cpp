@@ -3,6 +3,7 @@
 ReservationElementaire::ReservationElementaire(shared_ptr<const OffreReservationAbstrait> offre, Moment momentAchat, BDP bdp) :
 offre(offre), momentAchat(momentAchat) {
     baseDePlanif = make_shared<BDP>(bdp);
+    nom = offre->nom;
 };
 
 ReservationElementaire::ReservationElementaire(ReservationElementaire& source): momentAchat(source.momentAchat), offre(source.offre) {
@@ -37,4 +38,13 @@ Vendeur ReservationElementaire::getVendeur(){
 double ReservationElementaire::conversionEuroCad = 1.5;
 void ReservationElementaire::changeConversionEuroCad(double conversion){
     conversionEuroCad = conversion;
+}
+
+string ReservationElementaire::afficher(){
+    string returnVal = "";
+    cout << "   Reservation " << offre->nom
+                    << ", prix total ($CA): " << obtenirOffreCad() << "." << endl;
+    returnVal += "   Reservation " + offre->nom +
+                ", prix total ($CA): " + to_string(obtenirOffreCad()) + "\n";
+    return returnVal;
 }

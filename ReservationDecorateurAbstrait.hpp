@@ -10,12 +10,8 @@
 using namespace std;
 
 
-class ReservationDecorateurAbstrait : public ReservationAbstrait {
+class ReservationDecorateurAbstrait : public ReservationElementaire {
 public:
-    ReservationDecorateurAbstrait() = default;
-    ReservationDecorateurAbstrait(shared_ptr<ReservationAbstrait> reservation, shared_ptr<Moment> moment);
-    void creerReservation(ReservationComposite* parent, shared_ptr<ReservationAbstrait> element);
-    void retirerReservation(string nomReservation);
-    shared_ptr<ReservationAbstrait> reservation;
-    shared_ptr<Moment> moment;
+    ReservationDecorateurAbstrait();
+    ReservationDecorateurAbstrait(shared_ptr<ReservationElementaire> reservation);
 };

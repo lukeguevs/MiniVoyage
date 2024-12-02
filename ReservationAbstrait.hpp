@@ -19,6 +19,7 @@ public:
     int profondeur = 0;
     string nom = "";
     Voyage* voyage;
+    virtual string afficher() = 0;
 protected:
     virtual ~ReservationAbstrait() = default;
     ReservationAbstrait() = default;

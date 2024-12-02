@@ -14,19 +14,20 @@ using namespace std;
 
 class BDP;
 
-class ReservationElementaire : public ReservationAbstrait{
+class ReservationElementaire : public ReservationAbstrait {
 private:
     Vendeur vendeur;
     shared_ptr<BDP> baseDePlanif;
     static double conversionEuroCad;
 public:
+    ReservationElementaire() = default;
     ReservationElementaire(ReservationElementaire& source);
     ReservationElementaire(shared_ptr<const OffreReservationAbstrait> offre, Moment momentAchat, BDP bdp);
     void setVendeur(Vendeur vendeur);
     Vendeur getVendeur();
     Moment momentAchat;
     shared_ptr<const OffreReservationAbstrait> offre;
-    
+    string afficher();
     void creerReservation(ReservationComposite* parent, shared_ptr<ReservationAbstrait> element);
     void retirerReservation(string nomReservation);
     int obtenirOffreCad();

@@ -59,5 +59,7 @@ void ReservationComposite::definirVoyage(Voyage* voyage) {
     }
 }
 
-
-
+string ReservationComposite::afficher(){
+    cout << nom << endl;
+    return nom;
+}

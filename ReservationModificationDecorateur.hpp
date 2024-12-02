@@ -10,10 +10,15 @@ using namespace std;
 
 class ReservationModificationDecorateur : public ReservationDecorateurAbstrait {
 private:
-    vector<shared_ptr<ReservationAbstrait>> modifications;
+    vector<shared_ptr<ReservationElementaire>> modifications;
+
 public:
-    ReservationModificationDecorateur() = default;
-    void ajouterModification(shared_ptr<ReservationAbstrait> modification);
-    void retirerModification(shared_ptr<ReservationAbstrait> modification);
-    
+    ReservationModificationDecorateur(shared_ptr<ReservationElementaire> reservation);
+    vector<shared_ptr<ReservationElementaire>> getModifications();
+    void ajouterModification(shared_ptr<ReservationElementaire> modification);
+    void retirerModification(string nomReservation);
+    void retirerModification(shared_ptr<ReservationElementaire> modification);
+    static shared_ptr<ReservationModificationDecorateur> transformerEnDecorateur( vector<shared_ptr<ReservationAbstrait>>& reservations, shared_ptr<ReservationAbstrait> res);
+    string afficher();
+    shared_ptr<ReservationAbstrait> reservation;
 };

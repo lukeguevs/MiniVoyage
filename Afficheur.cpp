@@ -41,14 +41,27 @@ void Afficheur::setFilename(string newFilename) {
     filename = newFilename;
 }
 
-void Afficheur::afficherReservations(shared_ptr<Voyage> voyage){
+void Afficheur::afficherReservations(shared_ptr<Voyage> voyage) {
+
     cout << voyage->nom << ": " << endl;
-    messages.push_back(voyage->nom + ": \n");
-    for (auto segment : voyage->reservations->reservations){
-        shared_ptr<ReservationComposite> segmentPtr = 
-            dynamic_pointer_cast<ReservationComposite>(segment);
-            for (auto journees : segmentPtr->reservations){
-                
+    messages.push_back(voyage->nom + ":\n");
+
+    for (auto segment : voyage->reservations->reservations) {
+        auto segmentPtr = dynamic_pointer_cast<ReservationComposite>(segment);
+        if (!segmentPtr) continue;
+
+        for (auto journee : segmentPtr->reservations) {
+            auto journeePtr = dynamic_pointer_cast<ReservationComposite>(journee);
+            if (!journeePtr) continue;
+
+            cout << "  Journee : " << journeePtr->nom << ": " << endl;
+            messages.push_back("  Journee : " + journeePtr->nom + ":\n");
+
+            for (auto reservation : journeePtr->reservations) {
+                auto message = reservation->afficher();
+                messages.push_back(message);
             }
+        }
     }
 }
+

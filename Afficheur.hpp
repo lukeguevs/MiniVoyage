@@ -2,6 +2,9 @@
 #include <fstream>
 #include <vector>
 #include "Voyage.hpp"
+#include "ReservationModificationDecorateur.hpp"
+#include "ReservationCommentaireDecorateur.hpp"
+#include "Commentaire.hpp"
 using namespace std;
 
 
@@ -14,8 +17,8 @@ class Afficheur {
         string getFilename();
         void setFilename(string filename);
         vector<string> messages;
-        void afficherReservations(Voyage voyage);
-        
+        void afficherReservations(shared_ptr<Voyage> voyage);
+
     private:
         Afficheur() = default;
         string filename;

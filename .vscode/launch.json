@@ -35,7 +35,7 @@
       "stopAtEntry": false,
       "externalConsole": true,
       "cwd": "c:/Users/lucas/Lucas/Polytechnique/Session Automne 2024/LOG2400/Repos/MiniVoyageLOG2400",
-      "program": "c:/Users/lucas/Lucas/Polytechnique/Session Automne 2024/LOG2400/Repos/MiniVoyageLOG2400/build/Debug/outDebug",
+      "program": "c:/Users/lucas/Lucas/Polytechnique/Session Automne 2024/LOG2400/Repos/MiniVoyageLOG2400/build/Release/outRelease",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

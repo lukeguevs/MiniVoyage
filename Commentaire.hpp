@@ -9,4 +9,6 @@ private:
     string texte;
 public:
     Commentaire(string commentaire);
+    void setTexte(string newTexte);
+    string getTexte();
 };

@@ -18,4 +18,5 @@ public:
     void definirVoyage(Voyage* voyage);
     string type = "";
     bool masculin;
+    string afficher();
 };

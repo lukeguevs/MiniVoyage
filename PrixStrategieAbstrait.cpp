@@ -5,3 +5,5 @@ PrixStrategieAbstrait::PrixStrategieAbstrait(OffreReservationAbstrait* contexte)
 void PrixStrategieAbstrait::etablirContexte(OffreReservationAbstrait* contexte) {
     this->contexte = contexte;
 };
+
+PrixStrategieAbstrait::PrixStrategieAbstrait() {};

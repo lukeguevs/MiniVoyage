@@ -12,6 +12,7 @@
 #include "Afficheur.hpp"
 #include "OffreDeReservationDecorateur.hpp"
 #include "PrixRabaisStrategie.hpp"
+#include "PrixAugmentationStrategie.hpp"
 
 using namespace std;
 
@@ -171,18 +172,23 @@ int main()
         << "--- Debut de la sortie du TP5" << endl
         << endl;
     
+
+
     shared_ptr<Commentaire> rabais5Dollars = make_shared<Commentaire>("Rabais de 5 dollars canadiens au Louvre pour les étudiants de Polytechnique Montréal!");
 
+    // shared_ptr<PrixAugmentationStrategie> augmentationHebergement = make_shared<PrixAugmentationStrategie>(0.03);
+    // shared_ptr<PrixAugmentationStrategie> augmentationAutresOffres = make_shared<PrixAugmentationStrategie>(0.02);
 
+    // bdor.obtenirIterateur()->changerPrix(augmentationHebergement, "hebergement");
+    // bdor.obtenirIterateur()->changerPrix(augmentationAutresOffres, "transport");
+    // bdor.obtenirIterateur()->changerPrix(augmentationAutresOffres, "excursion");
 
     PrixRabaisStrategie rabais(excursions[1].get(), POURCENTAGERABAIS_5DOLLARS);
 
-    excursions[1]->changerStrategie(make_shared<PrixRabaisStrategie> (rabais));
+    excursions[1]->changerStrategie(make_shared<PrixRabaisStrategie>(rabais));
 
-
-    
-
-
+    auto excursionDeco = OffreDeReservationDecorateur::transformerEnDecorateur(excursions[1]);
+    excursionDeco->ajouterCommentaire(rabais5Dollars);
 
     Moment moment1027("27 octobre 2024", "19h");
     shared_ptr<ReservationElementaire> restaurantStella = make_shared<ReservationElementaire>(
@@ -209,7 +215,13 @@ int main()
     afficheur->setFilename("logDora.txt");
     afficheur->afficherReservations(v1);
 
-    afficheur->setFilename("logDiego.txt");
+    // afficheur->setFilename("logDiego.txt");
+
+    // afficheur->afficherReservations(v2);
+
+    // afficheur->setFilename("logAlicia.txt");
+
+    // afficheur->afficherReservations(v3);
 
 
 

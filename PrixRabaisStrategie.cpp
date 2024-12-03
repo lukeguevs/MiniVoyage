@@ -1,4 +1,4 @@
-//
+
 #include "PrixRabaisStrategie.hpp"
 #include "OffreReservationAbstrait.hpp"
 

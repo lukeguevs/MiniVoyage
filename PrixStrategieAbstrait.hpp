@@ -10,6 +10,7 @@ class PrixStrategieAbstrait {
 protected:
     OffreReservationAbstrait* contexte;
 public:
+    PrixStrategieAbstrait();
     PrixStrategieAbstrait(OffreReservationAbstrait* contexte);
     void etablirContexte(OffreReservationAbstrait* contexte);
     virtual ~PrixStrategieAbstrait() = default;

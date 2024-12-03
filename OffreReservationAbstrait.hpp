@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <memory>
-
+#include "PrixAugmentationStrategie.hpp"
 using namespace std;
 
 class PrixStrategieAbstrait;
@@ -24,6 +24,6 @@ public:
     string nom;
     virtual ~OffreReservationAbstrait() = default;
 
-    friend class PrixRegulierStrategie;
+    friend class PrixAugmentationStrategie;
     friend class PrixRabaisStrategie;
 };

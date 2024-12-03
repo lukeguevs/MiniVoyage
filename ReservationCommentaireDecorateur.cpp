@@ -26,7 +26,7 @@ shared_ptr<ReservationCommentaireDecorateur> ReservationCommentaireDecorateur::t
                 return reservationDeco;
             }
 
-            else if (auto reservationElem2 = dynamic_pointer_cast<ReservationElementaire>(reservation)){
+            else if (auto reservationElem = dynamic_pointer_cast<ReservationElementaire>(reservation)){
 
             auto reservationDeco = make_shared<ReservationCommentaireDecorateur>(reservationElem);
                 reservation = reservationDeco;

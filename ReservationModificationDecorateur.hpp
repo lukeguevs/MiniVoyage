@@ -20,7 +20,7 @@ public:
     void retirerReservation(string nomReservation) override;
     void retirerModification(shared_ptr<ReservationElementaire> modification);
     static shared_ptr<ReservationModificationDecorateur> transformerEnDecorateur( vector<shared_ptr<ReservationAbstrait>>& reservations, shared_ptr<ReservationAbstrait> res);
-    static void changerReservationVoyage(shared_ptr<Voyage>& voyage, shared_ptr<ReservationModificationDecorateur> res);
+    static void changerReservationVoyage(shared_ptr<Voyage>& voyage, shared_ptr<ReservationElementaire> res);
     string afficher();
     shared_ptr<ReservationAbstrait> reservation;
     void annuler();

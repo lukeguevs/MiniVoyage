@@ -39,7 +39,7 @@ shared_ptr<ReservationModificationDecorateur> ReservationModificationDecorateur:
     return nullptr;
 }
 
-void ReservationModificationDecorateur::changerReservationVoyage(shared_ptr<Voyage>& voyage, shared_ptr<ReservationModificationDecorateur> res){
+void ReservationModificationDecorateur::changerReservationVoyage(shared_ptr<Voyage>& voyage, shared_ptr<ReservationElementaire> res){
     
     for (auto segment : voyage->reservations->reservations) {
         auto segmentPtr = dynamic_pointer_cast<ReservationComposite>(segment);

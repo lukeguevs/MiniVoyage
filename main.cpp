@@ -211,6 +211,9 @@ int main()
 
     auto hotelAvecDecor1031Comment = ReservationCommentaireDecorateur::transformerEnDecorateur(journee1031->reservations, hotelAvecDecor1031);
 
+    ReservationModificationDecorateur::changerReservationVoyage(v2, hotelAvecDecor1031Comment);
+    ReservationModificationDecorateur::changerReservationVoyage(v3, hotelAvecDecor1031Comment);
+
     hotelAvecDecor1031Comment->ajouterCommentaire(commentaire1031);
     hotelAvecDecor1031->annuler();
 
@@ -225,11 +228,13 @@ int main()
     afficheur->setFilename("logDiego.txt");
 
     afficheur->afficherReservations(v2);
+    afficheur->exporter();
     cout << endl;
 
     afficheur->setFilename("logAlicia.txt");
 
     afficheur->afficherReservations(v3);
+    afficheur->exporter();
     cout << endl;
 
     cout << endl << "Total du nombre d'offres de réservations dans la BDOR: " << to_string(bdor.obtenirIterateur()->compterOffres()) << "." << endl;

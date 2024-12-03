@@ -4,6 +4,7 @@
 #include <string>
 #include <memory>
 #include "ReservationDecorateurAbstrait.hpp"
+#include "IterateurPlanification.hpp"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ public:
     void retirerReservation(string nomReservation) override;
     void retirerModification(shared_ptr<ReservationElementaire> modification);
     static shared_ptr<ReservationModificationDecorateur> transformerEnDecorateur( vector<shared_ptr<ReservationAbstrait>>& reservations, shared_ptr<ReservationAbstrait> res);
+    static void changerReservationVoyage(shared_ptr<Voyage>& voyage, shared_ptr<ReservationModificationDecorateur> res);
     string afficher();
     shared_ptr<ReservationAbstrait> reservation;
     void annuler();

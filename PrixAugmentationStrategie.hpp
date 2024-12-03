@@ -9,10 +9,8 @@
 
 class PrixAugmentationStrategie : public PrixStrategieAbstrait {
 public:
-    PrixAugmentationStrategie(OffreReservationAbstrait* contexte, double augmentation);
     PrixAugmentationStrategie(double augmentation);
-    PrixAugmentationStrategie(OffreReservationAbstrait *contexte);
-    int obtenirPrix() const;
+    double obtenirChangement() const;
 private:
     double augmentation;
 };

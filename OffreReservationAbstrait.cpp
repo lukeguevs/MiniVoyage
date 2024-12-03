@@ -2,15 +2,14 @@
 
 
 OffreReservationAbstrait::OffreReservationAbstrait(string nom, int prix, string devise) : nom(nom), prix(prix), devise(devise) {
-    strategiePrix = make_shared<PrixAugmentationStrategie>(this);
+    strategiePrix = make_shared<PrixAugmentationStrategie>(0);
 };
 
 int OffreReservationAbstrait::obtenirPrix() const {
-    return strategiePrix->obtenirPrix();
+    return prix * strategiePrix->obtenirChangement();
 }
 
 void OffreReservationAbstrait::changerStrategie(shared_ptr<PrixStrategieAbstrait> strategie) {
-    strategie->etablirContexte(this);
     strategiePrix = strategie;
 }
 

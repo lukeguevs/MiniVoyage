@@ -11,6 +11,6 @@ class PrixRabaisStrategie : public PrixStrategieAbstrait {
 private:
     double rabais;
 public:
-    PrixRabaisStrategie(OffreReservationAbstrait* contexte, double rabais);
-    int obtenirPrix() const;
+    PrixRabaisStrategie(double rabais);
+    double obtenirChangement() const;
 };

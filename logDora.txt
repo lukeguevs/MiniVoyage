@@ -50,3 +50,452 @@ Voyage de Dora:
 
    Reservation Air Transat 111 2024-11-03, prix total ($CA): 719
 
+Voyage de Dora:
+
+  Journee : 2024-10-26:
+
+   Reservation Air Canada AC 870 2024-10-26, prix total ($CA): 1171
+
+  Journee : 2024-10-27:
+
+    Reservation Restaurant de l'hôtel Stella pour le 27 octobre 202419h
+
+  Journee : 2024-10-28:
+
+   Reservation Paris Dîner-croisière sur la Seine by Bateaux Mouches, prix total ($CA): 190
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-10-29:
+
+   Reservation TAP Air Portugal TP 0441 2024-10-29, prix total ($CA): 392
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-30:
+
+   Reservation Visite du Musée Calouste-Gulbenkian, prix total ($CA): 15
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-31:
+
+   Reservation easyJet 4592 2024-10-31, prix total ($CA): 527
+
+
+  Journee : 2024-11-01:
+
+   Reservation Visite guidée pour voir les chefs-d'œuvre du musée du Louvre, prix total ($CA): 111
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-02:
+
+   Reservation Visite guidée à Versailles et accès prioritaire avec transfert depuis l'hôtel au départ de Paris, prix total ($CA): 88
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-03:
+
+   Reservation Air Transat 111 2024-11-03, prix total ($CA): 747
+
+Voyage de Dora:
+
+  Journee : 2024-10-26:
+
+   Reservation Air Canada AC 870 2024-10-26, prix total ($CA): 1171
+
+  Journee : 2024-10-27:
+
+    Reservation Restaurant de l'hôtel Stella pour le 27 octobre 202419h
+
+  Journee : 2024-10-28:
+
+   Reservation Paris Dîner-croisière sur la Seine by Bateaux Mouches, prix total ($CA): 190
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-10-29:
+
+   Reservation TAP Air Portugal TP 0441 2024-10-29, prix total ($CA): 392
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-30:
+
+   Reservation Visite du Musée Calouste-Gulbenkian, prix total ($CA): 15
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-31:
+
+   Reservation easyJet 4592 2024-10-31, prix total ($CA): 527
+
+    Commentaire: Excellent service!.
+
+  Journee : 2024-11-01:
+
+   Reservation Visite guidée pour voir les chefs-d'œuvre du musée du Louvre, prix total ($CA): 111
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-02:
+
+   Reservation Visite guidée à Versailles et accès prioritaire avec transfert depuis l'hôtel au départ de Paris, prix total ($CA): 88
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-03:
+
+   Reservation Air Transat 111 2024-11-03, prix total ($CA): 747
+
+Voyage de Dora:
+
+  Journee : 2024-10-26:
+
+   Reservation Air Canada AC 870 2024-10-26, prix total ($CA): 1171
+
+  Journee : 2024-10-27:
+
+    Reservation Restaurant de l'hôtel Stella pour le 27 octobre 202419h
+
+  Journee : 2024-10-28:
+
+   Reservation Paris Dîner-croisière sur la Seine by Bateaux Mouches, prix total ($CA): 190
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-10-29:
+
+   Reservation TAP Air Portugal TP 0441 2024-10-29, prix total ($CA): 392
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-30:
+
+   Reservation Visite du Musée Calouste-Gulbenkian, prix total ($CA): 15
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-31:
+
+   Reservation easyJet 4592 2024-10-31, prix total ($CA): 527
+
+    Commentaire: Excellent service!.
+
+  Journee : 2024-11-01:
+
+   Reservation Visite guidée pour voir les chefs-d'œuvre du musée du Louvre, prix total ($CA): 111
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-02:
+
+   Reservation Visite guidée à Versailles et accès prioritaire avec transfert depuis l'hôtel au départ de Paris, prix total ($CA): 88
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-03:
+
+   Reservation Air Transat 111 2024-11-03, prix total ($CA): 747
+
+Voyage de Dora:
+
+  Journee : 2024-10-26:
+
+   Reservation Air Canada AC 870 2024-10-26, prix total ($CA): 1171
+
+  Journee : 2024-10-27:
+
+    Reservation Restaurant de l'hôtel Stella pour le 27 octobre 202419h
+
+  Journee : 2024-10-28:
+
+   Reservation Paris Dîner-croisière sur la Seine by Bateaux Mouches, prix total ($CA): 190
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-10-29:
+
+   Reservation TAP Air Portugal TP 0441 2024-10-29, prix total ($CA): 392
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-30:
+
+   Reservation Visite du Musée Calouste-Gulbenkian, prix total ($CA): 15
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-31:
+
+   Reservation easyJet 4592 2024-10-31, prix total ($CA): 527
+
+    Commentaire: Excellent service!.
+
+  Journee : 2024-11-01:
+
+   Reservation Visite guidée pour voir les chefs-d'œuvre du musée du Louvre, prix total ($CA): 111
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-02:
+
+   Reservation Visite guidée à Versailles et accès prioritaire avec transfert depuis l'hôtel au départ de Paris, prix total ($CA): 88
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-03:
+
+   Reservation Air Transat 111 2024-11-03, prix total ($CA): 747
+
+Voyage de Dora:
+
+  Journee : 2024-10-26:
+
+   Reservation Air Canada AC 870 2024-10-26, prix total ($CA): 1171
+
+  Journee : 2024-10-27:
+
+    Reservation Restaurant de l'hôtel Stella pour le 27 octobre 202419h
+
+  Journee : 2024-10-28:
+
+   Reservation Paris Dîner-croisière sur la Seine by Bateaux Mouches, prix total ($CA): 190
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-10-29:
+
+   Reservation TAP Air Portugal TP 0441 2024-10-29, prix total ($CA): 392
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-30:
+
+   Reservation Visite du Musée Calouste-Gulbenkian, prix total ($CA): 15
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-31:
+
+   Reservation easyJet 4592 2024-10-31, prix total ($CA): 527
+
+    Commentaire: Excellent service!.
+
+  Journee : 2024-11-01:
+
+   Reservation Visite guidée pour voir les chefs-d'œuvre du musée du Louvre, prix total ($CA): 111
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-02:
+
+   Reservation Visite guidée à Versailles et accès prioritaire avec transfert depuis l'hôtel au départ de Paris, prix total ($CA): 88
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-03:
+
+   Reservation Air Transat 111 2024-11-03, prix total ($CA): 747
+
+Voyage de Dora:
+
+  Journee : 2024-10-26:
+
+   Reservation Air Canada AC 870 2024-10-26, prix total ($CA): 1171
+
+  Journee : 2024-10-27:
+
+    Reservation Restaurant de l'hôtel Stella pour le 27 octobre 202419h
+
+  Journee : 2024-10-28:
+
+   Reservation Paris Dîner-croisière sur la Seine by Bateaux Mouches, prix total ($CA): 190
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-10-29:
+
+   Reservation TAP Air Portugal TP 0441 2024-10-29, prix total ($CA): 392
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-30:
+
+   Reservation Visite du Musée Calouste-Gulbenkian, prix total ($CA): 15
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-31:
+
+   Reservation easyJet 4592 2024-10-31, prix total ($CA): 527
+
+    Commentaire: Excellent service!.
+
+  Journee : 2024-11-01:
+
+   Reservation Visite guidée pour voir les chefs-d'œuvre du musée du Louvre, prix total ($CA): 111
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-02:
+
+   Reservation Visite guidée à Versailles et accès prioritaire avec transfert depuis l'hôtel au départ de Paris, prix total ($CA): 88
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-03:
+
+   Reservation Air Transat 111 2024-11-03, prix total ($CA): 747
+
+Voyage de Dora:
+
+  Journee : 2024-10-26:
+
+   Reservation Air Canada AC 870 2024-10-26, prix total ($CA): 1171
+
+  Journee : 2024-10-27:
+
+    Reservation Restaurant de l'hôtel Stella pour le 27 octobre 202419h
+
+  Journee : 2024-10-28:
+
+   Reservation Paris Dîner-croisière sur la Seine by Bateaux Mouches, prix total ($CA): 190
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-10-29:
+
+   Reservation TAP Air Portugal TP 0441 2024-10-29, prix total ($CA): 392
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-30:
+
+   Reservation Visite du Musée Calouste-Gulbenkian, prix total ($CA): 15
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-31:
+
+   Reservation easyJet 4592 2024-10-31, prix total ($CA): 527
+
+    Commentaire: Excellent service!.
+
+  Journee : 2024-11-01:
+
+   Reservation Visite guidée pour voir les chefs-d'œuvre du musée du Louvre, prix total ($CA): 111
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-02:
+
+   Reservation Visite guidée à Versailles et accès prioritaire avec transfert depuis l'hôtel au départ de Paris, prix total ($CA): 88
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-03:
+
+   Reservation Air Transat 111 2024-11-03, prix total ($CA): 747
+
+Voyage de Dora:
+
+  Journee : 2024-10-26:
+
+   Reservation Air Canada AC 870 2024-10-26, prix total ($CA): 1171
+
+  Journee : 2024-10-27:
+
+    Reservation Restaurant de l'hôtel Stella pour le 27 octobre 202419h
+
+  Journee : 2024-10-28:
+
+   Reservation Paris Dîner-croisière sur la Seine by Bateaux Mouches, prix total ($CA): 190
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-10-29:
+
+   Reservation TAP Air Portugal TP 0441 2024-10-29, prix total ($CA): 392
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-30:
+
+   Reservation Visite du Musée Calouste-Gulbenkian, prix total ($CA): 15
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-31:
+
+   Reservation easyJet 4592 2024-10-31, prix total ($CA): 527
+
+    Commentaire: Excellent service!.
+
+  Journee : 2024-11-01:
+
+   Reservation Visite guidée pour voir les chefs-d'œuvre du musée du Louvre, prix total ($CA): 111
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-02:
+
+   Reservation Visite guidée à Versailles et accès prioritaire avec transfert depuis l'hôtel au départ de Paris, prix total ($CA): 88
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-03:
+
+   Reservation Air Transat 111 2024-11-03, prix total ($CA): 747
+
+Voyage de Dora:
+
+  Journee : 2024-10-26:
+
+   Reservation Air Canada AC 870 2024-10-26, prix total ($CA): 1171
+
+  Journee : 2024-10-27:
+
+    Reservation Restaurant de l'hôtel Stella pour le 27 octobre 202419h
+
+  Journee : 2024-10-28:
+
+   Reservation Paris Dîner-croisière sur la Seine by Bateaux Mouches, prix total ($CA): 190
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-10-29:
+
+   Reservation TAP Air Portugal TP 0441 2024-10-29, prix total ($CA): 392
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-30:
+
+   Reservation Visite du Musée Calouste-Gulbenkian, prix total ($CA): 15
+
+   Reservation Hôtel Roma, prix total ($CA): 318
+
+  Journee : 2024-10-31:
+
+   Reservation easyJet 4592 2024-10-31, prix total ($CA): 527
+
+    Commentaire: Excellent service!.
+
+  Journee : 2024-11-01:
+
+   Reservation Visite guidée pour voir les chefs-d'œuvre du musée du Louvre, prix total ($CA): 111
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-02:
+
+   Reservation Visite guidée à Versailles et accès prioritaire avec transfert depuis l'hôtel au départ de Paris, prix total ($CA): 88
+
+   Reservation Hotel Stella, prix total ($CA): 427
+
+  Journee : 2024-11-03:
+
+   Reservation Air Transat 111 2024-11-03, prix total ($CA): 747
+

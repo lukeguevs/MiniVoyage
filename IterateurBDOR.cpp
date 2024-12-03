@@ -8,10 +8,11 @@ void IterateurBDOR::changerPrix(shared_ptr<PrixStrategieAbstrait> strategie, str
     if (!bdCategorie) return;
 
     for (auto offre : bdCategorie->getElements()){
-        strategie->etablirContexte(offre.get());
         offre->changerStrategie(strategie);
+        offre->changePrix(offre->obtenirPrix());
     }
 }
+
 
 
 int IterateurBDOR::compterOffres(){

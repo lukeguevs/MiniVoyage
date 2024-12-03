@@ -39,6 +39,28 @@ shared_ptr<ReservationModificationDecorateur> ReservationModificationDecorateur:
     return nullptr;
 }
 
+void ReservationModificationDecorateur::changerReservationVoyage(shared_ptr<Voyage>& voyage, shared_ptr<ReservationModificationDecorateur> res){
+    
+    for (auto segment : voyage->reservations->reservations) {
+        auto segmentPtr = dynamic_pointer_cast<ReservationComposite>(segment);
+        if (!segmentPtr) continue;
+
+        for (auto journee : segmentPtr->reservations) {
+            auto journeePtr = dynamic_pointer_cast<ReservationComposite>(journee);
+            if (!journeePtr) continue;
+
+            for (size_t i = 0; i < journeePtr->reservations.size(); ++i) {
+                auto reservationPtr = dynamic_pointer_cast<ReservationElementaire>(journeePtr->reservations[i]);
+                if (reservationPtr && reservationPtr->nom == res->nom && 
+                    reservationPtr->momentAchat.date == res->momentAchat.date) {
+                    journeePtr->reservations[i] = res;
+                    return;
+                }
+            }
+        }
+    }
+}
+
 string ReservationModificationDecorateur::afficher(){
     reservation->afficher();
     string returnVal = "";

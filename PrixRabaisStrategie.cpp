@@ -3,9 +3,9 @@
 #include "OffreReservationAbstrait.hpp"
 
 
-PrixRabaisStrategie::PrixRabaisStrategie(OffreReservationAbstrait* contexte, double rabais) : PrixStrategieAbstrait(contexte), rabais(rabais) {
+PrixRabaisStrategie::PrixRabaisStrategie(double rabais) : rabais(rabais) {
 }
 
-int PrixRabaisStrategie::obtenirPrix() const{
-    return contexte->prix * (1.0 - rabais);
+double PrixRabaisStrategie::obtenirChangement() const{
+    return (1.0 - rabais);
 }

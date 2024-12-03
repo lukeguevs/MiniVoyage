@@ -32,6 +32,7 @@ shared_ptr<ReservationModificationDecorateur> ReservationModificationDecorateur:
                 reservation = reservationDeco;
 
                 return reservationDeco;
+                
             } else return nullptr;
             
         }

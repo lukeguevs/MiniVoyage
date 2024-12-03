@@ -9,7 +9,6 @@ class OffreDeReservationDecorateur : public OffreReservationAbstrait
 
 public:
     vector<shared_ptr<Commentaire>> commentaires;
-    shared_ptr<OffreReservationAbstrait> reservation;
 
     void ajouterCommentaire(shared_ptr<Commentaire> commentaire);
     void retirerCommentaire(shared_ptr<Commentaire> commentaire);

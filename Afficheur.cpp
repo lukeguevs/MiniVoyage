@@ -65,9 +65,9 @@ void Afficheur::afficherReservations(shared_ptr<Voyage> voyage) {
                 auto message = reservation->afficher();
                 messages.push_back(message);
                 if (auto reservationPtr = dynamic_pointer_cast<ReservationElementaire>(reservation)){
-                    if(auto offre = dynamic_pointer_cast<OffreDeReservationDecorateur>(reservationPtr->offre)) {
+                    if( auto offre = dynamic_pointer_cast<OffreDeReservationDecorateur>(reservationPtr->offre)) {
                         for (auto comment : offre->commentaires){
-                            cout << "    Commentaire: "  << comment->getTexte();
+                            cout << "    Commentaire: "  << comment->getTexte() << endl << endl;
                             messages.push_back("    Commentaire: " + comment->getTexte());
                         }
                     }

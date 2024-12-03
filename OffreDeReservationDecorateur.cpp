@@ -9,7 +9,7 @@ void OffreDeReservationDecorateur::retirerCommentaire(shared_ptr<Commentaire> co
     }
 }
 
-OffreDeReservationDecorateur::OffreDeReservationDecorateur(shared_ptr<OffreReservationAbstrait> reservation): OffreReservationAbstrait(*reservation), reservation(reservation){
+OffreDeReservationDecorateur::OffreDeReservationDecorateur(shared_ptr<OffreReservationAbstrait> reservation): OffreReservationAbstrait(*reservation) {
 }
 
 shared_ptr<OffreDeReservationDecorateur> OffreDeReservationDecorateur::transformerEnDecorateur(shared_ptr<OffreReservationAbstrait>& res){

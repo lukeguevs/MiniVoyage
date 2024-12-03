@@ -10,12 +10,13 @@ class PrixStrategieAbstrait;
 class ReservationElementaire;
 
 class OffreReservationAbstrait {
-protected:
+private:
     string devise;
     int prix;
     shared_ptr<PrixStrategieAbstrait> strategiePrix;
     
 public:
+    
     OffreReservationAbstrait(string nom, int prix, string devise);
     void changePrix(int prix);
     void changerStrategie(shared_ptr<PrixStrategieAbstrait> strategie);

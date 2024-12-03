@@ -171,15 +171,13 @@ int main()
     cout << endl
         << "--- Debut de la sortie du TP5" << endl
         << endl;
-    
 
     PrixRabaisStrategie rabais(POURCENTAGERABAIS_5DOLLARS);
 
     excursions[1]->changerStrategie(make_shared<PrixRabaisStrategie>(rabais));
 
-    auto excursionDeco = OffreDeReservationDecorateur::transformerEnDecorateur(excursions[1]);
-
     shared_ptr<Commentaire> rabais5Dollars = make_shared<Commentaire>("Rabais de 5 dollars canadiens au Louvre pour les étudiants de Polytechnique Montréal!");
+    auto excursionDeco = OffreDeReservationDecorateur::transformerEnDecorateur(excursions[1]);
     excursionDeco->ajouterCommentaire(rabais5Dollars);
 
     shared_ptr<PrixAugmentationStrategie> augmentationHebergement = make_shared<PrixAugmentationStrategie>(0.03);
@@ -188,7 +186,6 @@ int main()
     bdor.obtenirIterateur()->changerPrix(augmentationHebergement, "hebergement");
     bdor.obtenirIterateur()->changerPrix(augmentationAutresOffres, "transport");
     bdor.obtenirIterateur()->changerPrix(augmentationAutresOffres, "excursion");
-
 
     Moment moment1027("27 octobre 2024", "19h");
     shared_ptr<ReservationElementaire> restaurantStella = make_shared<ReservationElementaire>(
@@ -238,6 +235,5 @@ int main()
     cout << endl;
 
     cout << endl << "Total du nombre d'offres de réservations dans la BDOR: " << to_string(bdor.obtenirIterateur()->compterOffres()) << "." << endl;
-
 
 }

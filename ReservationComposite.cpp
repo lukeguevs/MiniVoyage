@@ -63,3 +63,7 @@ string ReservationComposite::afficher(){
     cout << nom << endl;
     return nom;
 }
+
+void ReservationComposite::annuler(){
+    reservations.clear();
+}

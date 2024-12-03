@@ -22,14 +22,15 @@ private:
 public:
     ReservationElementaire() = default;
     ReservationElementaire(ReservationElementaire& source);
-    ReservationElementaire(shared_ptr<const OffreReservationAbstrait> offre, Moment momentAchat, BDP bdp);
+    ReservationElementaire(shared_ptr<OffreReservationAbstrait> offre, Moment momentAchat, BDP bdp);
     void setVendeur(Vendeur vendeur);
     Vendeur getVendeur();
     Moment momentAchat;
-    shared_ptr<const OffreReservationAbstrait> offre;
+    shared_ptr<OffreReservationAbstrait> offre;
     string afficher();
     void creerReservation(ReservationComposite* parent, shared_ptr<ReservationAbstrait> element);
     void retirerReservation(string nomReservation);
     int obtenirOffreCad();
     static void changeConversionEuroCad(double conversion);
+    void annuler();
 };

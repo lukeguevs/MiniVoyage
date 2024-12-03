@@ -21,6 +21,7 @@ public:
         vector<shared_ptr<ReservationAbstrait>> &reservations, shared_ptr<ReservationAbstrait> res);
     ReservationCommentaireDecorateur(shared_ptr<ReservationElementaire> res);
     ReservationCommentaireDecorateur(shared_ptr<ReservationModificationDecorateur> res);
+    void annuler();
 
     string afficher();
     shared_ptr<ReservationAbstrait> reservation;

@@ -50,8 +50,14 @@ string ReservationModificationDecorateur::afficher(){
 }
 
 
-void ReservationModificationDecorateur::retirerModification(string nomReservation) {
+void ReservationModificationDecorateur::retirerReservation(string nomReservation) {
     for (auto i = modifications.size() - 1; i >= 0; i--) {
         if (modifications[i].get()->nom == nomReservation) modifications.erase(modifications.begin() + i);
     }
+    return;
+}
+
+void ReservationModificationDecorateur::annuler(){
+    reservation->annuler();
+    modifications.clear();
 }

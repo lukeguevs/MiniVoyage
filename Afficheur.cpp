@@ -45,6 +45,7 @@ void Afficheur::afficherReservations(shared_ptr<Voyage> voyage) {
 
     cout << voyage->nom << ": " << endl;
     messages.push_back(voyage->nom + ":\n");
+    string lastDayName;
 
     for (auto segment : voyage->reservations->reservations) {
         auto segmentPtr = dynamic_pointer_cast<ReservationComposite>(segment);
@@ -54,12 +55,23 @@ void Afficheur::afficherReservations(shared_ptr<Voyage> voyage) {
             auto journeePtr = dynamic_pointer_cast<ReservationComposite>(journee);
             if (!journeePtr) continue;
 
-            cout << "  Journee : " << journeePtr->nom << ": " << endl;
+            if (journeePtr->nom != lastDayName) {
+                cout << "  Journee : " << journeePtr->nom << ": " << endl;
             messages.push_back("  Journee : " + journeePtr->nom + ":\n");
+            }
+                lastDayName = journeePtr->nom;
 
             for (auto reservation : journeePtr->reservations) {
                 auto message = reservation->afficher();
                 messages.push_back(message);
+                if (auto reservationPtr = dynamic_pointer_cast<ReservationElementaire>(reservation)){
+                    if(auto offre = dynamic_pointer_cast<OffreDeReservationDecorateur>(reservationPtr->offre)) {
+                        for (auto comment : offre->commentaires){
+                            cout << "    Commentaire: "  << comment->getTexte();
+                            messages.push_back("    Commentaire: " + comment->getTexte());
+                        }
+                    }
+                }
             }
         }
     }

@@ -20,6 +20,7 @@ public:
     string nom = "";
     Voyage* voyage;
     virtual string afficher() = 0;
+    virtual void annuler() = 0;
 protected:
     virtual ~ReservationAbstrait() = default;
     ReservationAbstrait() = default;

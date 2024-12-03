@@ -16,9 +16,10 @@ public:
     ReservationModificationDecorateur(shared_ptr<ReservationElementaire> reservation);
     vector<shared_ptr<ReservationElementaire>> getModifications();
     void ajouterModification(shared_ptr<ReservationElementaire> modification);
-    void retirerModification(string nomReservation);
+    void retirerReservation(string nomReservation) override;
     void retirerModification(shared_ptr<ReservationElementaire> modification);
     static shared_ptr<ReservationModificationDecorateur> transformerEnDecorateur( vector<shared_ptr<ReservationAbstrait>>& reservations, shared_ptr<ReservationAbstrait> res);
     string afficher();
     shared_ptr<ReservationAbstrait> reservation;
+    void annuler();
 };

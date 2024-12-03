@@ -16,6 +16,7 @@ public:
     void retirerReservation(string nomReservation);
     void creerReservation(ReservationComposite* parent, shared_ptr<ReservationAbstrait> element);
     void definirVoyage(Voyage* voyage);
+    void annuler();
     string type = "";
     bool masculin;
     string afficher();

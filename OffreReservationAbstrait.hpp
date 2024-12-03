@@ -22,8 +22,8 @@ public:
     int obtenirPrix() const;
     string obtenirDevise() const;
     string nom;
-    
-    
+    virtual ~OffreReservationAbstrait() = default;
+
     friend class PrixRegulierStrategie;
     friend class PrixRabaisStrategie;
 };

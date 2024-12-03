@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -5,6 +6,7 @@
 #include "ReservationModificationDecorateur.hpp"
 #include "ReservationCommentaireDecorateur.hpp"
 #include "Commentaire.hpp"
+#include "OffreDeReservationDecorateur.hpp"
 using namespace std;
 
 

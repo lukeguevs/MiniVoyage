@@ -33,8 +33,8 @@ shared_ptr<ReservationCommentaireDecorateur> ReservationCommentaireDecorateur::t
                 return reservationDeco;
             }
         }
-        return nullptr;
     }
+        return nullptr;
 }
 
 vector<shared_ptr<Commentaire>> ReservationCommentaireDecorateur::getCommentaires(){
@@ -46,7 +46,12 @@ string ReservationCommentaireDecorateur::afficher(){
     string returnVal = "";
     for (auto comment : commentaires){
         cout << "    Commentaire: " << comment->getTexte() << "." << endl;
-        returnVal += "   Commentaire: " + comment->getTexte() + ".\n";
+        returnVal += "    Commentaire: " + comment->getTexte() + ".\n";
     }
     return returnVal;
+}
+
+void ReservationCommentaireDecorateur::annuler(){
+    reservation->annuler();
+    commentaires.clear();
 }

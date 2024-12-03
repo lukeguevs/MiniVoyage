@@ -10,7 +10,12 @@
 #include "ReservationDecorateurAbstrait.hpp"
 #include "ReservationModificationDecorateur.hpp"
 #include "Afficheur.hpp"
+#include "OffreDeReservationDecorateur.hpp"
+#include "PrixRabaisStrategie.hpp"
+
 using namespace std;
+
+double POURCENTAGERABAIS_5DOLLARS = 0.046;
 
 int main()
 {
@@ -166,16 +171,29 @@ int main()
         << "--- Debut de la sortie du TP5" << endl
         << endl;
     
+    shared_ptr<Commentaire> rabais5Dollars = make_shared<Commentaire>("Rabais de 5 dollars canadiens au Louvre pour les étudiants de Polytechnique Montréal!");
+
+
+
+    PrixRabaisStrategie rabais(excursions[1].get(), POURCENTAGERABAIS_5DOLLARS);
+
+    excursions[1]->changerStrategie(make_shared<PrixRabaisStrategie> (rabais));
+
+
+    
+
+
+
     Moment moment1027("27 octobre 2024", "19h");
     shared_ptr<ReservationElementaire> restaurantStella = make_shared<ReservationElementaire>(
-        make_shared<OffreReservationAbstrait>("Restaurant de l'hôtel Stella pour trois personnes", 50.0, "EUR"), moment1027, bdp);
+        make_shared<OffreReservationAbstrait>("Restaurant de l'hôtel Stella", 50.0, "EUR"), moment1027, bdp);
 
     auto hotelAvecDecor1027 = ReservationModificationDecorateur::transformerEnDecorateur(journee1027->reservations, hotelStella);
     hotelAvecDecor1027->ajouterModification(restaurantStella);
 
     Moment moment1031n2("31 octobre 2024", "19h");
     shared_ptr<ReservationElementaire> restaurantStella2 = make_shared<ReservationElementaire>(
-        make_shared<OffreReservationAbstrait>("Restaurant de l'hôtel Stella pour trois personnes", 50.0, "EUR"), moment1031n2, bdp);
+        make_shared<OffreReservationAbstrait>("Restaurant de l'hôtel Stella", 50.0, "EUR"), moment1031n2, bdp);
 
     auto hotelAvecDecor1031 = ReservationModificationDecorateur::transformerEnDecorateur(journee1031->reservations, hotelStella3);
     hotelAvecDecor1031->ajouterModification(restaurantStella2);
@@ -185,11 +203,14 @@ int main()
     auto hotelAvecDecor1031Comment = ReservationCommentaireDecorateur::transformerEnDecorateur(journee1031->reservations, hotelAvecDecor1031);
 
     hotelAvecDecor1031Comment->ajouterCommentaire(commentaire1031);
+    hotelAvecDecor1031Comment->annuler();
 
     auto afficheur = Afficheur::obtenirInstance();
-
+    afficheur->setFilename("logDora.txt");
     afficheur->afficherReservations(v1);
 
-    
+    afficheur->setFilename("logDiego.txt");
+
+
 
 }

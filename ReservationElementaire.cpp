@@ -1,6 +1,6 @@
 #include "ReservationElementaire.hpp"
 
-ReservationElementaire::ReservationElementaire(shared_ptr<const OffreReservationAbstrait> offre, Moment momentAchat, BDP bdp) :
+ReservationElementaire::ReservationElementaire(shared_ptr<OffreReservationAbstrait> offre, Moment momentAchat, BDP bdp) :
 offre(offre), momentAchat(momentAchat) {
     baseDePlanif = make_shared<BDP>(bdp);
     nom = offre->nom;
@@ -21,6 +21,7 @@ void ReservationElementaire::creerReservation(ReservationComposite* parent, shar
 }
 
 void ReservationElementaire::retirerReservation(string nomReservation){
+
 }
 
 int ReservationElementaire::obtenirOffreCad(){
@@ -47,4 +48,7 @@ string ReservationElementaire::afficher(){
     returnVal += "   Reservation " + offre->nom +
                 ", prix total ($CA): " + to_string(obtenirOffreCad()) + "\n";
     return returnVal;
+}
+
+void ReservationElementaire::annuler(){
 }
